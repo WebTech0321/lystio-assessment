@@ -1,5 +1,4 @@
-export const MAPBOX_TOKEN =
-  "pk.eyJ1IjoiY29tbWFhaSIsImEiOiJjangyYXV0c20wMGU2NDluMWR4amUydGl5In0.6Vb11S6tdX6Arpj6trRE_g"; //process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
+export const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 export const BASE_URL = "https://api.lystio.co/";
 
 export const DEFAULT_LOCATION = {
