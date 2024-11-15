@@ -22,9 +22,12 @@ const filterPlaceholders = [
 const PriceFilter = () => {
   const { minPrice, maxPrice, rent, setPriceRange } = useFilterStore();
 
-  const handleChangePrice = useCallback((v: number[]) => {
-    setPriceRange(v[0], v[1]);
-  }, []);
+  const handleChangePrice = useCallback(
+    (v: number[]) => {
+      setPriceRange(v[0], v[1]);
+    },
+    [setPriceRange]
+  );
 
   return (
     <Popover>

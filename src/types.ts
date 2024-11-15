@@ -51,7 +51,7 @@ export interface ITenement {
   rentFull: number;
   rentDeposit: number;
   amenities: number[];
-  amenitiesTexts: Object;
+  amenitiesTexts: object;
   location: [number, number];
   locationReal: [number, number];
   availableFrom: Date;

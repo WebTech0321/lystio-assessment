@@ -7,7 +7,7 @@ axios.defaults.baseURL = BASE_URL;
 
 export async function getTenementData(
   search: string,
-  filter: Object,
+  filter: object,
   page: number = 0,
   perPage: number = 10
 ): Promise<{ data: ITenement[]; total: number }> {
@@ -30,7 +30,7 @@ export async function getTenementData(
 
 export async function getTenementMapData(
   zoom: number,
-  filter: Object
+  filter: object
 ): Promise<IMapResponse> {
   try {
     const response = await axios.post("/tenement/search/map", {
@@ -51,7 +51,7 @@ export async function getTenementMapData(
 
 export const useTenementSearch = (
   search: string,
-  filter: Object,
+  filter: object,
   page: number,
   rowsPerPage: number = 10
 ) => {
@@ -61,7 +61,7 @@ export const useTenementSearch = (
   });
 };
 
-export const useTenementMapSearch = (zoom: number, filter: Object) => {
+export const useTenementMapSearch = (zoom: number, filter: object) => {
   return useQuery({
     queryKey: ["tenement-map-search", zoom, filter],
     queryFn: () => getTenementMapData(zoom, filter),
